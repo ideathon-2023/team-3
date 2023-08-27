@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:pec_chat/providers/user_provider.dart';
 import 'package:pec_chat/resources/firestore_methods.dart';
-import 'package:pec_chat/utils/colors.dart';
 import 'package:pec_chat/utils/utils.dart';
 import 'package:provider/provider.dart';
 
@@ -170,7 +169,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
                     color: Colors.blueAccent,
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: Center(
+                  child: const Center(
                     child: Text(
                       'New Post',
                       style: TextStyle(
@@ -239,7 +238,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
                         children: [
                           Container(
                             child: Padding(
-                              padding: EdgeInsets.only(right: 10),
+                              padding: const EdgeInsets.only(right: 10),
                               child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceAround,
@@ -251,7 +250,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsets.only(left: 16),
+                                    padding: const EdgeInsets.only(left: 16),
                                     child: SizedBox(
                                       width: MediaQuery.of(context).size.width *
                                           0.3,
@@ -263,7 +262,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
                                                 color: Colors.blueGrey),
                                             border: InputBorder.none),
                                         maxLines: 8,
-                                        style: TextStyle(color: Colors.black),
+                                        style: const TextStyle(color: Colors.black),
                                       ),
                                     ),
                                   ),

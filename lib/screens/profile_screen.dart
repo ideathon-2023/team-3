@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:pec_chat/resources/auth_methods.dart';
 import 'package:pec_chat/resources/firestore_methods.dart';
 import 'package:pec_chat/screens/login_screen.dart';
-import 'package:pec_chat/utils/colors.dart';
 import 'package:pec_chat/utils/utils.dart';
 import 'package:pec_chat/widgets/follow_button.dart';
 
@@ -74,9 +73,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
         : Scaffold(
 
            appBar: PreferredSize(
-             preferredSize: Size.fromHeight(kToolbarHeight),
+             preferredSize: const Size.fromHeight(kToolbarHeight),
              child: Container(
-             decoration: BoxDecoration(
+             decoration: const BoxDecoration(
 
             color: Colors.blue
             ),
@@ -84,7 +83,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 backgroundColor: Colors.transparent,
               // Set transparent background color
                // Remove shadow
-                 title: Text(
+                 title: const Text(
               'PEC chat', style: TextStyle(
                    fontStyle: FontStyle.italic,
                  ) ,
@@ -98,7 +97,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               body:ListView(
                 children: [
                   Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       borderRadius: BorderRadius.only(
                           bottomRight: Radius.circular(10),
                           bottomLeft: Radius.circular(10)),
