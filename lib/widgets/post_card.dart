@@ -69,14 +69,13 @@ class _PostCardState extends State<PostCard> {
     return Container(
       // boundary needed for web
       decoration: BoxDecoration(
-        border: Border.all(
-          
-          color: Colors.black
-        ),
-        color: Colors.white,
+        borderRadius: BorderRadius.circular(0),
+        border: Border.all(color: Colors.black),
+        color: Colors.teal,
       ),
       padding: const EdgeInsets.symmetric(
         vertical: 10,
+        horizontal: 5,
       ),
       child: Column(
         children: [
@@ -106,9 +105,7 @@ class _PostCardState extends State<PostCard> {
                         Text(
                           widget.snap['username'].toString(),
                           style: const TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black
-                          ),
+                              fontWeight: FontWeight.bold, color: Colors.black),
                         ),
                       ],
                     ),
@@ -116,7 +113,7 @@ class _PostCardState extends State<PostCard> {
                 ),
                 widget.snap['uid'].toString() == user.uid
                     ? IconButton(
-                      color: Colors.black,
+                        color: Colors.black,
                         onPressed: () {
                           showDialog(
                             useRootNavigator: false,
@@ -153,8 +150,7 @@ class _PostCardState extends State<PostCard> {
                             },
                           );
                         },
-                        icon: const Icon(Icons.more_vert)
-                      )
+                        icon: const Icon(Icons.more_vert))
                     : Container(),
               ],
             ),
@@ -191,30 +187,30 @@ class _PostCardState extends State<PostCard> {
                     errorWidget: (context, url, error) => Icon(Icons.error),
                   ),
                 ),
-AnimatedOpacity(
-  duration: const Duration(milliseconds: 200),
-  opacity: isLikeAnimating ? 1 : 0,
-  child: LikeAnimation(
-    isAnimating: isLikeAnimating,
-    duration: const Duration(milliseconds: 400),
-    onEnd: () {
-      setState(() {
-        isLikeAnimating = false;
-      });
-    },
-    child: Container(
-      decoration: BoxDecoration(
-        border: Border.all(color: Colors.white), // Add black border
-      ),
-      child: const Icon(
-        Icons.favorite,
-        color: Colors.white,
-        size: 100,
-      ),
-    ),
-  ),
-),
-
+                AnimatedOpacity(
+                  duration: const Duration(milliseconds: 200),
+                  opacity: isLikeAnimating ? 1 : 0,
+                  child: LikeAnimation(
+                    isAnimating: isLikeAnimating,
+                    duration: const Duration(milliseconds: 400),
+                    onEnd: () {
+                      setState(() {
+                        isLikeAnimating = false;
+                      });
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                        border:
+                            Border.all(color: Colors.white), // Add black border
+                      ),
+                      child: const Icon(
+                        Icons.favorite,
+                        color: Colors.white,
+                        size: 100,
+                      ),
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
@@ -230,10 +226,7 @@ AnimatedOpacity(
                           Icons.favorite,
                           color: Colors.red,
                         )
-                      : const Icon(
-                          Icons.favorite_border,
-                          color: Colors.black
-                        ),
+                      : const Icon(Icons.favorite_border, color: Colors.black),
                   onPressed: () => FireStoreMethods().likePost(
                     widget.snap['postId'].toString(),
                     user.uid,
@@ -275,18 +268,40 @@ AnimatedOpacity(
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                DefaultTextStyle(
-                    style: Theme.of(context)
-                        .textTheme
-                        .titleSmall!
-                        .copyWith(fontWeight: FontWeight.w800, color: Colors.black),
-                    child: Text(
-                      '${widget.snap['likes'].length} likes',
-                      style: TextStyle(
-                        color: Colors.black,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    DefaultTextStyle(
+                      style: Theme.of(context).textTheme.titleSmall!.copyWith(
+                          fontWeight: FontWeight.w800, color: Colors.black),
+                      child: Text(
+                        '${widget.snap['likes'].length} likes',
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
                       ),
-                      
-                    )),
+                    ),
+                    InkWell(
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(vertical: 4),
+                        child: Text(
+                          'View all $commentLen comments',
+                          style: const TextStyle(
+                            fontSize: 16,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ),
+                      onTap: () => Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => CommentsScreen(
+                            postId: widget.snap['postId'].toString(),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
                 Container(
                   width: double.infinity,
                   padding: const EdgeInsets.only(
@@ -306,25 +321,6 @@ AnimatedOpacity(
                           text: ' ${widget.snap['description']}',
                         ),
                       ],
-                    ),
-                  ),
-                ),
-                InkWell(
-                  child: Container(
-                    padding: const EdgeInsets.symmetric(vertical: 4),
-                    child: Text(
-                      'View all $commentLen comments',
-                      style: const TextStyle(
-                        fontSize: 16,
-                        color: Colors.black,
-                      ),
-                    ),
-                  ),
-                  onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) => CommentsScreen(
-                        postId: widget.snap['postId'].toString(),
-                      ),
                     ),
                   ),
                 ),
