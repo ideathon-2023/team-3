@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:pec_chat/providers/user_provider.dart';
 import 'package:pec_chat/resources/firestore_methods.dart';
+import 'package:pec_chat/utils/colors.dart';
 import 'package:pec_chat/utils/utils.dart';
 import 'package:provider/provider.dart';
 
@@ -29,7 +30,8 @@ class _AddPostScreenState extends State<AddPostScreen> {
               // Background color for the "Create a Post" block
               padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10), color: Colors.blue),
+                  borderRadius: BorderRadius.circular(10),
+                  color: Colors.teal[700]),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -166,10 +168,10 @@ class _AddPostScreenState extends State<AddPostScreen> {
                   height: 50,
                   padding: const EdgeInsets.all(8), // Adjust padding here
                   decoration: BoxDecoration(
-                    color: Colors.blueAccent,
+                    color: Colors.teal,
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: const Center(
+                  child: Center(
                     child: Text(
                       'New Post',
                       style: TextStyle(
@@ -192,7 +194,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
           )
         : Scaffold(
             appBar: AppBar(
-              backgroundColor: Colors.blueAccent,
+              backgroundColor: Colors.teal,
               leading: IconButton(
                 icon: const Icon(Icons.arrow_back),
                 color: Colors.black,
@@ -238,7 +240,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
                         children: [
                           Container(
                             child: Padding(
-                              padding: const EdgeInsets.only(right: 10),
+                              padding: EdgeInsets.only(right: 10),
                               child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceAround,
@@ -250,7 +252,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsets.only(left: 16),
+                                    padding: EdgeInsets.only(left: 16),
                                     child: SizedBox(
                                       width: MediaQuery.of(context).size.width *
                                           0.3,
@@ -262,7 +264,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
                                                 color: Colors.blueGrey),
                                             border: InputBorder.none),
                                         maxLines: 8,
-                                        style: const TextStyle(color: Colors.black),
+                                        style: TextStyle(color: Colors.black),
                                       ),
                                     ),
                                   ),

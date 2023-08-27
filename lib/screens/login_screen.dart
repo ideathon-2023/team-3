@@ -5,9 +5,11 @@ import 'package:pec_chat/responsive/mobile_screen_layout.dart';
 import 'package:pec_chat/responsive/responsive_layout.dart';
 import 'package:pec_chat/responsive/web_screen_layout.dart';
 import 'package:pec_chat/screens/signup_screen.dart';
+import 'package:pec_chat/utils/colors.dart';
 import 'package:pec_chat/utils/global_variable.dart';
 import 'package:pec_chat/utils/utils.dart';
 import 'package:pec_chat/widgets/text_field_input.dart';
+import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -67,7 +69,7 @@ class _LoginScreenState extends State<LoginScreen> {
         child: Stack(
           children: [
             Container(
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('assets/images/bg.jpg'),
                   fit: BoxFit.cover,
@@ -97,7 +99,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     Container(
                       // Wrap the column in a Container
                       color: Colors.teal, // Set your desired background color
-                      padding: const EdgeInsets.all(16),
+                      padding: EdgeInsets.all(16),
                       child: Column(
                         children: [
                           TextFieldInput(
@@ -105,7 +107,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             textInputType: TextInputType.emailAddress,
                             textEditingController: _emailController,
                           ),
-                          const SizedBox(height: 24),
+                          SizedBox(height: 24),
                           TextFieldInput(
                             hintText: 'Enter your password',
                             textInputType: TextInputType.text,
@@ -115,25 +117,25 @@ class _LoginScreenState extends State<LoginScreen> {
                         ],
                       ),
                     ),
-                    const SizedBox(height: 24),
+                    SizedBox(height: 24),
                     InkWell(
                       onTap: loginUser,
                       child: Container(
                         width: double.infinity,
                         alignment: Alignment.center,
                         padding: const EdgeInsets.symmetric(vertical: 12),
-                        decoration: const ShapeDecoration(
+                        decoration: ShapeDecoration(
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.all(Radius.circular(4)),
                           ),
                           color: Colors.teal,
                         ),
                         child: !_isLoading
-                            ? const Text(
+                            ? Text(
                                 'Log in',
                                 style: TextStyle(color: Colors.black),
                               )
-                            : const CircularProgressIndicator(
+                            : CircularProgressIndicator(
                                 color: Colors.white,
                               ),
                       ),

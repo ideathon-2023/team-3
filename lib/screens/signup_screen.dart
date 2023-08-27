@@ -87,7 +87,7 @@ class _SignupScreenState extends State<SignupScreen> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Container(
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/images/bg.jpg'),
             fit: BoxFit.cover,
@@ -112,7 +112,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 const SizedBox(
                   height: 64,
                 ),
-                const Stack(
+                Stack(
                   children: [
                     // ... circle avatar code ...
                   ],

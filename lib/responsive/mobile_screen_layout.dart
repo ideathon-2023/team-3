@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:pec_chat/utils/colors.dart';
 import 'package:pec_chat/utils/global_variable.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -85,7 +87,7 @@ class _MobileScreenLayoutState extends State<MobileScreenLayout> {
       appBar: AppBar(
         backgroundColor: Colors.teal,
         leading: Padding(
-          padding: const EdgeInsets.all(5),
+          padding: EdgeInsets.all(5),
           child: SvgPicture.asset(
             'assets/images/pec_chat.svg',
             color: Colors.black,
@@ -104,7 +106,7 @@ class _MobileScreenLayoutState extends State<MobileScreenLayout> {
                   color: Colors.grey.withOpacity(0.3),
                   spreadRadius: 2,
                   blurRadius: 3,
-                  offset: const Offset(0, 2),
+                  offset: Offset(0, 2),
                 ),
               ],
             ),

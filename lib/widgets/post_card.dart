@@ -5,6 +5,8 @@ import 'package:pec_chat/models/user.dart' as model;
 import 'package:pec_chat/providers/user_provider.dart';
 import 'package:pec_chat/resources/firestore_methods.dart';
 import 'package:pec_chat/screens/comments_screen.dart';
+import 'package:pec_chat/utils/colors.dart';
+import 'package:pec_chat/utils/global_variable.dart';
 import 'package:pec_chat/utils/utils.dart';
 import 'package:pec_chat/widgets/like_animation.dart';
 import 'package:intl/intl.dart';
@@ -181,8 +183,8 @@ class _PostCardState extends State<PostCard> {
                         ),
                       ),
                     ),
-                    placeholder: (context, url) => const CircularProgressIndicator(),
-                    errorWidget: (context, url, error) => const Icon(Icons.error),
+                    placeholder: (context, url) => CircularProgressIndicator(),
+                    errorWidget: (context, url, error) => Icon(Icons.error),
                   ),
                 ),
                 AnimatedOpacity(
@@ -274,7 +276,7 @@ class _PostCardState extends State<PostCard> {
                           fontWeight: FontWeight.w800, color: Colors.black),
                       child: Text(
                         '${widget.snap['likes'].length} likes',
-                        style: const TextStyle(
+                        style: TextStyle(
                           color: Colors.black,
                         ),
                       ),

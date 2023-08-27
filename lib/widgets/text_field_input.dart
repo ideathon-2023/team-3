@@ -21,7 +21,7 @@ class TextFieldInput extends StatelessWidget {
 
     return TextField(
       controller: textEditingController,
-      style: const TextStyle(color: Colors.black),
+      style: TextStyle(color: Colors.black),
       decoration: InputDecoration(
           hintText: hintText,
           border: inputBorder,
@@ -29,7 +29,7 @@ class TextFieldInput extends StatelessWidget {
           enabledBorder: inputBorder,
           filled: true,
           contentPadding: const EdgeInsets.all(8),
-          hintStyle: const TextStyle(color: Colors.black)),
+          hintStyle: TextStyle(color: Colors.black)),
       keyboardType: textInputType,
       obscureText: isPass,
     );
