@@ -18,18 +18,17 @@ class _FeedScreenState extends State<FeedScreen> {
     final width = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.black,
       appBar: width > webScreenSize
           ? null
       : AppBar(
-            backgroundColor: Colors.blue,
+            backgroundColor: Color.fromARGB(255, 16, 113, 7),
             centerTitle: false,
             elevation: 5,
-            // title: SvgPicture.asset(
-            //   'assets/ic_instagram.svg',
-            //   color: primaryColor,
-            //   height: 30,
-            // ),
+            title: SvgPicture.asset(
+              'assets/pec_chat.svg',
+              height: 30,
+            ),
       
             actions: [
               IconButton(

@@ -69,19 +69,21 @@ class _PostCardState extends State<PostCard> {
     return Container(
       // boundary needed for web
       decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(25),
         border: Border.all(
-          
           color: Colors.black
         ),
-        color: Colors.white,
+        color: Color.fromARGB(255, 199, 228, 131),
       ),
       padding: const EdgeInsets.symmetric(
         vertical: 10,
+        horizontal: 5,
       ),
       child: Column(
         children: [
           // HEADER SECTION OF THE POST
           Container(
+            
             padding: const EdgeInsets.symmetric(
               vertical: 4,
               horizontal: 16,

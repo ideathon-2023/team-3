@@ -46,33 +46,34 @@ class _MobileScreenLayoutState extends State<MobileScreenLayout> {
         children: homeScreenItems,
       ),
       bottomNavigationBar: CupertinoTabBar(
-        backgroundColor: mobileBackgroundColor,
+        backgroundColor: Color.fromARGB(255, 11, 124, 5),
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.home,
+              Icons.home_filled,
               color: (_page == 0) ? primaryColor : secondaryColor,
             ),
             label: '',
             backgroundColor: primaryColor,
+            
           ),
           BottomNavigationBarItem(
               icon: Icon(
-                Icons.search,
+                Icons.search_sharp,
                 color: (_page == 1) ? primaryColor : secondaryColor,
               ),
               label: '',
               backgroundColor: primaryColor),
           BottomNavigationBarItem(
               icon: Icon(
-                Icons.add_circle,
+                Icons.add_a_photo,
                 color: (_page == 2) ? primaryColor : secondaryColor,
               ),
               label: '',
               backgroundColor: primaryColor),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.favorite,
+              Icons.favorite_rounded,
               color: (_page == 3) ? primaryColor : secondaryColor,
             ),
             label: '',
