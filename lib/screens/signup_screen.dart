@@ -90,7 +90,7 @@ return Scaffold(
     decoration: BoxDecoration(
       image: DecorationImage(
         image: AssetImage('assets/images/bg.jpg'),
-        fit: BoxFit.cover, 
+        fit: BoxFit.cover,
       ),
     ),
     child: SafeArea(
