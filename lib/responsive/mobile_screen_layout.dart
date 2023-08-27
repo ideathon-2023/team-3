@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pec_chat/utils/colors.dart';
 import 'package:pec_chat/utils/global_variable.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class MobileScreenLayout extends StatefulWidget {
   const MobileScreenLayout({Key? key}) : super(key: key);
@@ -83,9 +84,19 @@ class _MobileScreenLayoutState extends State<MobileScreenLayout> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       appBar: AppBar(
-        title: Text('PEC CHAT'),
         backgroundColor: Colors.teal,
+        leading: Padding(
+      padding: EdgeInsets.all(5), 
+      child: SvgPicture.asset(
+                'assets/images/pec_chat.svg',
+                color: Colors.black,
+                height: 400,
+                width: 400,
+                
+              ),
+    ),
       ),
       body: Column(
         children: [
