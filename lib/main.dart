@@ -7,12 +7,10 @@ import 'package:pec_chat/responsive/mobile_screen_layout.dart';
 import 'package:pec_chat/responsive/responsive_layout.dart';
 import 'package:pec_chat/responsive/web_screen_layout.dart';
 import 'package:pec_chat/screens/login_screen.dart';
-import 'package:pec_chat/utils/colors.dart';
 import 'package:provider/provider.dart';
 
-
 void main() async {
-  await WidgetsFlutterBinding.ensureInitialized();
+  WidgetsFlutterBinding.ensureInitialized();
 
   // initialise app based on platform- web or mobile
   if (kIsWeb) {
@@ -43,7 +41,7 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Instagram Clone',
+        title: 'PEC CHAT',
         theme: ThemeData.light().copyWith(
           scaffoldBackgroundColor: Colors.white,
         ),

@@ -23,16 +23,13 @@ class TextFieldInput extends StatelessWidget {
       controller: textEditingController,
       style: TextStyle(color: Colors.black),
       decoration: InputDecoration(
-        hintText: hintText,
-        border: inputBorder,
-        focusedBorder: inputBorder,
-        enabledBorder: inputBorder,
-        filled: true,
-        contentPadding: const EdgeInsets.all(8),
-        hintStyle: TextStyle(
-          color: Colors.blueGrey
-        )
-      ),
+          hintText: hintText,
+          border: inputBorder,
+          focusedBorder: inputBorder,
+          enabledBorder: inputBorder,
+          filled: true,
+          contentPadding: const EdgeInsets.all(8),
+          hintStyle: TextStyle(color: Colors.black)),
       keyboardType: textInputType,
       obscureText: isPass,
     );

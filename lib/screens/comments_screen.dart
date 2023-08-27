@@ -51,7 +51,7 @@ class _CommentsScreenState extends State<CommentsScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.blueAccent,
+        backgroundColor: Colors.teal,
         title: const Text(
           'Comments',
         ),
@@ -98,12 +98,9 @@ class _CommentsScreenState extends State<CommentsScreen> {
                   child: TextField(
                     controller: commentEditingController,
                     decoration: InputDecoration(
-                      hintText: 'Comment as ${user.username}',
-                      border: InputBorder.none,
-                      hintStyle: TextStyle(
-                        color: Colors.black
-                      )
-                    ),
+                        hintText: 'Comment as ${user.username}',
+                        border: InputBorder.none,
+                        hintStyle: TextStyle(color: Colors.black)),
                   ),
                 ),
               ),
@@ -118,9 +115,10 @@ class _CommentsScreenState extends State<CommentsScreen> {
                       const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
                   child: const Text(
                     'Post',
-                    style: TextStyle(color: Colors.blue,
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                        color: Colors.teal,
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold),
                   ),
                 ),
               )

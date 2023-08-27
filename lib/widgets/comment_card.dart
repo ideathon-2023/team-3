@@ -46,13 +46,14 @@ class CommentCard extends StatelessWidget {
                     ],
                   ),
                 ),
-                const SizedBox(height: 4), // Add spacing between name and comment
+                const SizedBox(
+                    height: 4), // Add spacing between name and comment
                 Text(
                   snap.data()['text'],
                   style: const TextStyle(
-                    fontSize: 14, 
-                    color: Colors.black// Adjust font size as needed
-                  ),
+                      fontSize: 14,
+                      color: Colors.black // Adjust font size as needed
+                      ),
                 ),
               ],
             ),
