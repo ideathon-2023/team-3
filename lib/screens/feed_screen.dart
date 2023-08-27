@@ -19,40 +19,40 @@ class _FeedScreenState extends State<FeedScreen> {
 
     return Scaffold(
       backgroundColor: Colors.black,
-      appBar: width > webScreenSize
-          ? null
-      : AppBar(
-            backgroundColor: Color.fromARGB(255, 16, 113, 7),
-            centerTitle: false,
-            elevation: 5,
-            title: SvgPicture.asset(
-              'assets/pec_chat.svg',
-              height: 30,
-            ),
+      // appBar: width > webScreenSize
+      //     ? null
+//       : AppBar(
+//             backgroundColor: Color.fromARGB(255, 16, 113, 7),
+//             centerTitle: false,
+//             elevation: 5,
+//             title: SvgPicture.asset(
+//               'assets/pec_chat.svg',
+//               height: 30,
+//             ),
       
-            actions: [
-              IconButton(
-                icon: const Icon(
-                  Icons.messenger_outline,
-                  color: primaryColor,
-                ),
-                onPressed: () {},
-              ),
-            ],
-              bottom: PreferredSize(
-    preferredSize: Size.fromHeight(4.0), // Height of the border
-    child: Container(
-      decoration: BoxDecoration(
-        border: Border(
-          bottom: BorderSide(
-            color: Colors.black, // Color of the border
-            width: 2.0, // Width of the border
-          ),
-        ),
-      ),
-    ),
-  ),
-),
+//             actions: [
+//               IconButton(
+//                 icon: const Icon(
+//                   Icons.messenger_outline,
+//                   color: primaryColor,
+//                 ),
+//                 onPressed: () {},
+//               ),
+//             ],
+//               bottom: PreferredSize(
+//     preferredSize: Size.fromHeight(4.0), // Height of the border
+//     child: Container(
+//       decoration: BoxDecoration(
+//         border: Border(
+//           bottom: BorderSide(
+//             color: Colors.black, // Color of the border
+//             width: 2.0, // Width of the border
+//           ),
+//         ),
+//       ),
+//     ),
+//   ),
+// ),
 
           
         
